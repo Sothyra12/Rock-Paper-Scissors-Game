@@ -20,6 +20,7 @@ If the player chooses "Scissors" and the computer chooses "Paper"
 If the player chooses "Paper" and the computer chooses "Rock"
 A few function calls have been provided for you to test your function.
 
+
 */
 function getRandomComputerResult() {
     const options = ["Rock", "Paper", "Scissors"];
@@ -27,3 +28,16 @@ function getRandomComputerResult() {
     return options[randomIndex];
   }
 console.log(getRandomComputerResult());
+
+function hasPlayerWonTheRound(player, computer) {
+  return player == "Rock" && computer == "Scissors" ? true
+    : player == "Scissors" && computer == "Paper" ? true
+    : player == "Paper" && computer == "Rock" ? true
+    : false;
+
+  // return (
+  //   (player === "Rock" && computer === "Scissors") ||
+  //   (player === "Scissors" && computer === "Paper") ||
+  //   (player === "Paper" && computer === "Rock")
+  // );
+}
