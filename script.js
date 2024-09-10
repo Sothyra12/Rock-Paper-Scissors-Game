@@ -54,3 +54,11 @@ function hasPlayerWonTheRound(player, computer) {
   //   (player === "Paper" && computer === "Rock")
   // );
 }
+
+function getRoundResults(userOption) {
+  const computerResult = getRandomComputerResult();
+
+}
+
+console.log(getRoundResults("Rock"));
+console.log("Player Score: ", playerScore, "Computer Score: ", computerScore);
