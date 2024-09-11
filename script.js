@@ -34,6 +34,16 @@ If the computer wins the round, update the computerScore by 1 and return the mes
 [computer's choice] should be replaced with computerResult while [player's choice] should be replaced with the userOption.
 Remember you can use the hasPlayerWonTheRound function to check if the player wins the round.
 You can use template literals or regular string concatenation to build the message.
+
+
+** Step 4
+Now it is time to update the scores and the round results message.
+Complete the showResults function. The playerScoreSpanElement and
+computerScoreSpanElement should be updated to show the updated scores of the player and computer.
+The roundResultsMsg should also be updated with the result of the round.
+Tips
+Remember that you learned how to work with the innerText property to update the text content of an element.
+You can use the getRoundResults function to get the result of the round.
 */
 function getRandomComputerResult() {
     const options = ["Rock", "Paper", "Scissors"];
@@ -70,3 +80,16 @@ function getRoundResults(userOption) {
 
 console.log(getRoundResults("Rock"));
 console.log("Player Score: ", playerScore, "Computer Score: ", computerScore);
+
+const playerScoreSpanElement = document.getElementById("player-score");
+const computerScoreSpanElement = document.getElementById("computer-score");
+const roundResultsMsg = document.getElementById("results-msg");
+
+function showResults(userOption) {
+  const results = getRoundResults(userOption);
+  playerScoreSpanElment.innerText = playerScore;
+  computerScoreSpanElement.innerText = computerScore;
+  roundResultsMsg.innerText = results;
+};
+
+showResults("Rock");
