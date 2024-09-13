@@ -58,6 +58,20 @@ If there is a winner, you will want to show the resetGameBtn button and hide the
 so the player can play again.
 Tips
 Use the style.display property on an element, with the value "block" or "none", to show or hide the element.
+
+
+**Step 6
+If the player or computer has won the game, there should be an option to reset the game and play again.
+Complete the resetGame function that accomplishes the following:
+Resets the player and computer scores to 0.
+Updates the playerScoreSpanElement and computerScoreSpanElement to display the new scores.
+Hides the resetGameBtn button.
+Shows the optionsContainer so the player can play again.
+Clears the content for the winnerMsgElement and roundResultsMsg elements.
+Tips
+You can use the innerText property to update the content of an element.
+To clear the content of an element, you can set the innerText to an empty string.
+Once you apply those changes, you will have completed the Rock, Paper, Scissors game!
 */
 function getRandomComputerResult() {
     const options = ["Rock", "Paper", "Scissors"];
@@ -113,3 +127,15 @@ function showResults(userOption) {
 };
 
 showResults("Rock");
+
+
+function resetGame() {
+  playerScore = 0;
+  computerScore = 0;
+  playerScoreSpanElement.innerText = playerScore;
+  computerScoreSpanElement.innerText = computerScore;
+  resetGameBtn.style.display = "none";
+  optionsContainer.style.display = "block";
+  winnerMsgElement.innerText = '';
+  roundResultsMsg.innerText = '';
+};
